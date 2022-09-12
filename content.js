@@ -4,15 +4,15 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         
         let images = $('img').map((i, img) => {
             if ($(img).data('src')) {
-                return ({
+                formatted_images.push({
                     src: $(img).data('src')
                 });
             } else if ($(img).src) {
-                return ({
+                formatted_images.push({
                     src: $(img).src
                 });
             }
         })
-        sendResponse({data: images});
+        sendResponse(formatted_images);
     }
 });
