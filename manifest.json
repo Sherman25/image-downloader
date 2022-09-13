@@ -8,7 +8,8 @@
     "permissions": [
         "<all_urls>", 
         "tabs", 
-        "activeTab"
+        "activeTab",
+        "downloads"
     ],
     "background": {
         "scripts": [
